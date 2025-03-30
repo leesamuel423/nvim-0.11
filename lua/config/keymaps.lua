@@ -3,13 +3,13 @@ local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 vim.g.mapleader = " " -- Set the leader key to space
 vim.g.timeout = true
-vim.g.timeoutlen = 1000   -- Longer timeout for leader key sequences
+vim.g.timeoutlen = 1000 -- Longer timeout for leader key sequences
 vim.g.ttimeout = true
-vim.g.ttimeoutlen = 10    -- Shorter timeout for key codes
+vim.g.ttimeoutlen = 10 -- Shorter timeout for key codes
 
 -- General mappings
 map("n", "<leader>nh", ":nohl<CR>", { desc = "clear search highlights" }) -- Clear search highlights
-map("n", "<C-q>", "gg<S-v>G", opts)                                       -- Select all text
+map("n", "<C-q>", "gg<S-v>G", opts) -- Select all text
 
 -- Source in live setting
 map("n", "<space><space>x", "<cmd>source %<CR>")
@@ -71,7 +71,7 @@ map("n", "<leader>lj", vim.diagnostic.goto_next, { desc = "go to next diagnostic
 -- vim.keymap.set("n", "grn", vim.lsp.buf.rename)
 -- vim.keymap.set("n", "gra", vim.lsp.buf.code_action)
 -- vim.keymap.set("n", "grr", vim.lsp.buf.references)
--- vim.keymap.set("i", "<C-s>", vim.lsp.buf.signature_help)
+vim.keymap.set("i", "<C-s>", vim.lsp.buf.signature_help)
 
 -- Easy Align --
 map("x", "ga", "<Plug>(EasyAlign)")
