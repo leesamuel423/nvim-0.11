@@ -2,6 +2,104 @@
 
 This is a custom Neovim configuration using the lazy.nvim plugin manager.
 
+## Keyboard Shortcuts
+
+### General Mappings
+| Shortcut | Description |
+|----------|-------------|
+| `<leader>nh` | Clear search highlights |
+| `<C-q>` | Select all text |
+| `<space><space>x` | Source current file |
+| `<space>x` | Execute current line as Lua |
+| `n` / `N` | Find next/previous match and center screen |
+| `<leader>q` | Quit |
+
+### Navigation
+| Shortcut | Description |
+|----------|-------------|
+| `<C-h>` | Move to left window (normal mode), Move left (insert mode) |
+| `<C-j>` | Move to window below |
+| `<C-k>` | Move to window above |
+| `<C-l>` | Move to right window (normal mode), Move right (insert mode) |
+
+### Window Management
+| Shortcut | Description |
+|----------|-------------|
+| `<leader>sv` | Split window vertically |
+| `<leader>sh` | Split window horizontally |
+| `<leader>sb` | Make windows equal size |
+| `<leader>sx` | Close current split |
+
+### Tab Management
+| Shortcut | Description |
+|----------|-------------|
+| `<leader>tt` | Open new tab |
+| `<leader>tx` | Close current tab |
+| `L` | Go to next tab |
+| `H` | Go to previous tab |
+
+### Text Manipulation
+| Shortcut | Description |
+|----------|-------------|
+| `J` (visual) | Move selected text down |
+| `K` (visual) | Move selected text up |
+| `>` (visual) | Indent right and keep selection |
+| `<` (visual) | Indent left and keep selection |
+| `ga` | Easy Align (normal and visual mode) |
+
+### LSP Actions
+| Shortcut | Description |
+|----------|-------------|
+| `gD` | Go to declaration |
+| `<leader>d` | Show line diagnostics |
+| `<leader>lk` | Go to previous diagnostic |
+| `<leader>lj` | Go to next diagnostic |
+| `<C-s>` (insert) | LSP signature help |
+| `gd` | Goto definition (via FZF) |
+| `gr` | Find references |
+| `gI` | Goto implementation |
+| `<leader>D` | Type definition |
+| `<leader>ds` | Document symbols |
+| `<leader>ws` | Workspace symbols |
+| `<leader>cr` | Rename symbol |
+| `<leader>ca` | Code action |
+| `<leader>th` | Toggle inlay hints |
+
+### File Explorer
+| Shortcut | Description |
+|----------|-------------|
+| `<leader>pv` | Open file explorer (Oil.nvim) |
+| `-` | Open parent directory in floating window |
+
+### Undotree
+| Shortcut | Description |
+|----------|-------------|
+| `<leader>u` | Toggle undotree |
+
+### Harpoon
+| Shortcut | Description |
+|----------|-------------|
+| `<s-m>` | Mark file in Harpoon |
+| `<TAB>` | Toggle Harpoon menu |
+| `<leader>h1` | Go to Harpoon 1 |
+| `<leader>h2` | Go to Harpoon 2 |
+| `<leader>h3` | Go to Harpoon 3 |
+| `<leader>h4` | Go to Harpoon 4 |
+| `<C-S-P>` | Go to previous Harpoon mark |
+| `<C-S-N>` | Go to next Harpoon mark |
+
+### Treesitter TextObjects
+| Shortcut | Description |
+|----------|-------------|
+| `af` | Select around function |
+| `if` | Select inside function |
+| `ac` | Select around class |
+| `ao` | Select around comment |
+| `ic` | Select inside class |
+| `as` | Select language scope |
+| `<leader>a` | Swap with next parameter |
+| `<leader>A` | Swap with previous parameter |
+
 ## FZF Shortcuts
 
 | Shortcut | Description |
@@ -69,9 +167,3 @@ This is a custom Neovim configuration using the lazy.nvim plugin manager.
 | `<Alt-2>` | Vertical Terminal |
 | `<Alt-3>` | Float Terminal |
 | `<Ctrl-\>` | Toggle Terminal |
-
-## File Explorer
-
-| Shortcut | Description |
-|----------|-------------|
-| `-` | Open parent directory |

@@ -50,17 +50,6 @@ map("v", "<", "<gv", opts) -- Keep selection after indent left
 -- File explorer
 map("n", "<leader>pv", vim.cmd.Oil, opts) -- Open file explorer (using Oil.nvim)
 
--- -- Telescope (fuzzy finder)
--- map("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", { desc = "fuzzy find files in cwd" })
--- map("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "fuzzy find recent files" })
--- map("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "find string in cwd" })
--- map("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "find string under cursor in cwd" })
--- map("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "find todos" })
--- map("n", "gd", "<cmd>Telescope lsp_definitions<CR>", { desc = "show LSP definitions" })
--- map("n", "gi", "<cmd>Telescope lsp_implementations<CR>", { desc = "show LSP implementations" })
--- map("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", { desc = "show LSP type definitions" })
--- map("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", { desc = "show buffer diagnostics" })
-
 -- LSP actions
 map("n", "gD", vim.lsp.buf.declaration, { desc = "go to declaration" })
 map("n", "<leader>d", vim.diagnostic.open_float, { desc = "show line diagnostics" })
