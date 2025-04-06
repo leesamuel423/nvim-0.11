@@ -152,8 +152,55 @@ return {
 			yamlls = {},
 			rust_analyzer = {},
 			ts_ls = {
-				root_dir = { "package.json", "tsconfig.json" },
+				root_dir = function(fname)
+					return require("lspconfig.util").root_pattern(
+						"tsconfig.json",
+						"jsconfig.json",
+						"package.json",
+						".git"
+					)(fname)
+				end,
+				filetypes = {
+					"javascript",
+					"javascriptreact",
+					"javascript.jsx",
+					"typescript",
+					"typescriptreact",
+					"typescript.tsx",
+				},
 				single_file_support = false,
+				settings = {
+					typescript = {
+						inlayHints = {
+							includeInlayParameterNameHints = "all",
+							includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+							includeInlayFunctionParameterTypeHints = true,
+							includeInlayVariableTypeHints = true,
+							includeInlayPropertyDeclarationTypeHints = true,
+							includeInlayFunctionLikeReturnTypeHints = true,
+							includeInlayEnumMemberValueHints = true,
+						},
+						preferences = {
+							importModuleSpecifier = "relative",
+							importModuleSpecifierEnding = "minimal",
+						},
+					},
+					javascript = {
+						inlayHints = {
+							includeInlayParameterNameHints = "all",
+							includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+							includeInlayFunctionParameterTypeHints = true,
+							includeInlayVariableTypeHints = true,
+							includeInlayPropertyDeclarationTypeHints = true,
+							includeInlayFunctionLikeReturnTypeHints = true,
+							includeInlayEnumMemberValueHints = true,
+						},
+						preferences = {
+							importModuleSpecifier = "relative",
+							importModuleSpecifierEnding = "minimal",
+						},
+					},
+				},
 			},
 			denols = {
 				root_dir = { "deno.json", "deno.jsonc" },

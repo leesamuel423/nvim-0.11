@@ -52,6 +52,7 @@ map("n", "<leader>pv", vim.cmd.Oil, opts) -- Open file explorer (using Oil.nvim)
 
 -- LSP actions
 map("n", "gD", vim.lsp.buf.declaration, { desc = "go to declaration" })
+map("n", "K", vim.lsp.buf.hover, { desc = "show hover documentation" })
 map("n", "<leader>d", vim.diagnostic.open_float, { desc = "show line diagnostics" })
 map("n", "<leader>lk", vim.diagnostic.goto_prev, { desc = "go to previous diagnostic" })
 map("n", "<leader>lj", vim.diagnostic.goto_next, { desc = "go to next diagnostic" })
