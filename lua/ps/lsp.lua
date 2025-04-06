@@ -148,17 +148,21 @@ return {
 			ruff = {},
 			taplo = {},
 			jsonls = {},
-			jdtls = {},
 			yamlls = {},
 			rust_analyzer = {},
+			jdtls = {
+				handlers = {
+					-- By assigning an empty function, you can remove the notifications
+					-- printed to the cmd
+					["$/progress"] = function(_, result, ctx) end,
+				},
+				jdk = {
+					auto_install = false,
+				},
+			},
 			ts_ls = {
 				root_dir = function(fname)
-					return require("lspconfig.util").root_pattern(
-						"tsconfig.json",
-						"jsconfig.json",
-						"package.json",
-						".git"
-					)(fname)
+					return require("lspconfig.util").root_pattern("tsconfig.json", "jsconfig.json", "package.json", ".git")(fname)
 				end,
 				filetypes = {
 					"javascript",

@@ -7,6 +7,7 @@ require("config.keymaps")
 require("ps.autocmds")
 
 -- Define plugins to load
+spec("ps.nvim-java")
 spec("ps.treesitter")
 spec("ps.oil")
 spec("ps.mini")
