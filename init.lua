@@ -14,7 +14,6 @@ spec("ps.todo-comments")
 spec("ps.colorscheme")
 spec("ps.harpoon")
 spec("ps.indentline")
-spec("ps.toggleterm")
 spec("ps.undotree")
 spec("ps.fzf")
 spec("ps.conform")
@@ -25,6 +24,5 @@ spec("ps.showkeys")
 
 -- Load lazy.nvim and plugins
 require("config.lazy")
--- require("config.lsp")
 
 -- vim.lsp.enable({ "gopls", "clangd", "luasp" })

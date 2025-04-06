@@ -1,7 +1,14 @@
-return {
+local M = {
 	"nvzone/showkeys",
-	cmd = "ShowkeysToggle",
-	opts = {
-		maxkeys = 5,
-	},
 }
+
+function M.config()
+	require("showkeys").setup({
+		dev = true,
+		maxkeys = 5,
+		excluded_modes = { "i" },
+		position = "top-right",
+	})
+end
+
+return M

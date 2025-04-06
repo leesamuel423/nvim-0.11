@@ -10,7 +10,7 @@ return {
 		"typescript.tsx",
 	},
 	root_markers = { "tsconfig.json", "jsconfig.json", "package.json", ".git" },
-	single_file_support = true,
+	single_file_support = false,
 	settings = {
 		tsserver_file_preferences = {
 			includeInlayParameterNameHints = "all",

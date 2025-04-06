@@ -3,7 +3,7 @@ local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 vim.g.mapleader = " " -- Set the leader key to space
 vim.g.timeout = true
-vim.g.timeoutlen = 1000 -- Longer timeout for leader key sequences
+vim.g.timeoutlen = 30 -- Longer timeout for leader key sequences
 vim.g.ttimeout = true
 vim.g.ttimeoutlen = 10 -- Shorter timeout for key codes
 
@@ -68,3 +68,4 @@ map("n", "ga", "<Plug>(EasyAlign)")
 
 -- Quick Quit --
 map("n", "<leader>q", "<cmd>q<CR>", opts)
+map("i", "<C-c>", "<Escape>", opts)
